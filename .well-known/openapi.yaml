@@ -1,10 +1,10 @@
 openapi: 3.0.2
 info:
-  title: Retrieval Plugin API
-  description: A retrieval API for querying and filtering documents based on natural language queries and metadata
+  title: SeaLevel Docs API
+  description: This API lets you search through the SeaLevel Docs page
   version: 1.0.0
   servers:
-    - url: https://your-app-url.com
+    - url: https://coral-app-eliqu.ondigitalocean.app
 paths:
   /query:
     post:
@@ -133,6 +133,7 @@ components:
         queries:
           title: Queries
           type: array
+          description: This is an array of search query objects, each containing a natural language query string ("query") and an optional metadata filter ("filter"). Filters can help refine search results based on criteria such as document source or time period, but are not necessary in most cases. You can send multiple queries to compare information from different sources or break down complex questions into sub-questions.
           items:
             $ref: "#/components/schemas/Query"
     QueryResponse:
