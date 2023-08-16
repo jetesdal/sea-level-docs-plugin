@@ -4,7 +4,7 @@ info:
   description: This API lets you search through the SeaLevel Docs page
   version: 1.0.0
   servers:
-    - url: https://coral-app-eliqu.ondigitalocean.app
+    - url: https://plankton-app-crw5s.ondigitalocean.app
 paths:
   /query:
     post:
